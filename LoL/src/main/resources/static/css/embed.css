@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.embed-submit-field {
+  position: relative;
+  
+}
+.embed-submit-field input {
+    width: 100%;
+    padding: 15px;
+}
+
+.nav-embed-submit-field input {
+    width: 320px;
+    padding: 10px;
+}
+
+.embed-submit-field  button {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #ededed;
+    border-radius: 3px;
+    padding: 10px;
+    transition: all .2s;
+}
+
+.nav-embed-submit-field  button {
+    position: absolute;
+    right: 22px;
+    top: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #ededed;
+    border-radius: 3px;
+    padding: 5px;
+    transition: all .2s;
+}
+
+.embed-submit-field  button:hover {
+      background-color: #37C88D;
+      color: #fff;
+      cursor: pointer;
+ }
+    
+ .nav-embed-submit-field  button:hover {
+      background-color: #37C88D;
+      color: #fff;
+      cursor: pointer;
+}

@@ -71,7 +71,12 @@ public String searchSummoner(Model model, HttpServletRequest httpServletRequest)
 		
 		JsonParser jsonParser=new JsonParser();
 		JsonArray jsonArray=(JsonArray)jsonParser.parse(result);
-		JsonObject k=(JsonObject) jsonArray.get(0);
+		JsonObject k=null;
+		if(jsonArray.get(0).getAsJsonObject().get("queueType").getAsString().equals("RANKED_SOLO_5x5")) {
+		k=(JsonObject) jsonArray.get(0);
+		}else {
+		 k=(JsonObject) jsonArray.get(1);
+		}
 		int wins=k.get("wins").getAsInt();
 		int losses=k.get("losses").getAsInt();
 		String rank=k.get("rank").getAsString();
@@ -84,11 +89,10 @@ public String searchSummoner(Model model, HttpServletRequest httpServletRequest)
 	}catch (Exception e) {
 	System.out.println(e.getMessage());
 	}
-	
+	System.out.println(leagueInfo);
 	model.addAttribute("leagueInfo",leagueInfo);
 	model.addAttribute("tierImgURL","img/Emblem_"+leagueInfo.getTier()+".png");
 	model.addAttribute("summoner",temp);
-	System.out.println(leagueInfo);
 	model.addAttribute("profileImgURL","http://ddragon.leagueoflegends.com/cdn/11.19.1/img/profileicon/"+temp.getProfileIconId()+".png");
 	return "Result";
 }
