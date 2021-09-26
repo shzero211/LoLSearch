@@ -13,3 +13,15 @@
 	<link rel="stylesheet" href="css/embed.css">
     <title>Rank.gg에오신것을 환영합니다.</title>
   </head>
+  
+  <body>
+	<nav class="navbar sticky-top  navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">Rank.gg</a>
+		<form action="/search" method="GET">
+			<div class="nav-embed-submit-field">
+				<input type="text" placeholder="당신의 아이디를 검색하세요" name="username">
+				<button type="submit">검색!</button>
+			</div>
+		</form>
+
+	</nav>

@@ -19,7 +19,7 @@ import com.riot.boot.model.Summoner;
 
 @Controller
 public class SearchSummoner {
-	final static String API_KEY = "RGAPI-fb681665-67a4-4ea4-8598-27cd04ffda18";
+	final static String API_KEY = "RGAPI-5a7e847e-99c9-4007-a436-afec03547fb6";
 
 @RequestMapping(value="/search",method =RequestMethod.GET)
 public String searchSummoner(Model model, HttpServletRequest httpServletRequest) {
